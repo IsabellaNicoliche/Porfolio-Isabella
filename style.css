@@ -1,0 +1,261 @@
+:root{
+    --bg: #ffffff;
+    --bg-alt: #ff97d7;
+    --text: #000000;
+    --muted: #000000;
+    --accent: #000000;
+    --accent-2: #000000;
+    --radius: 14px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Work Sans", sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3{
+    font-family: "Lora", serif;
+    font-style: italic;
+    font-weight: 700;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/*Header*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    background-color: rgba(28, 22, 38, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 10;
+}
+
+.logo{
+    font-family: "Lora", serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.logo span{
+    color: var(--accent);
+}
+
+nav{
+    display: flex;
+    gap: 32px;
+}
+
+nav a{
+    font-size: 0.95rem;
+    color: var(--muted);
+    transition: color 0.2s ease;
+}
+
+nav a:hover{
+    color: var(--accent);
+}
+
+/* Sobre */
+
+.sobre{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 40px 80px;
+}
+
+.sobre-texto{
+    max-width: 520px;
+}
+
+.eyebrow{
+    color: var(--accent-2);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+}
+
+.sobre-texto h1{
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.cargo{
+    color: var(--accent);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.sobre-texto p:not(.eyebrow):not(.cargo){
+    color: var(--muted);
+}
+
+.sobre-foto img{
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    flex-shrink: 0;
+}
+
+/*Seções gerais*/
+
+section h2{
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.secao-intro{
+    color: var(--muted);
+    margin-bottom: 40px;
+}
+
+.projetos, .contato{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+
+/*Projetos*/
+
+.grid-projetos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+}
+
+.card-projeto{
+    background-color: var(--bg-alt);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid transparent;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.card-projeto:hover{
+    transform: translateY(-6px);
+    border-color: var(--accent);
+}
+
+.card-projeto img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.card-conteudo{
+    padding: 20px;
+}
+
+.card-conteudo h3{
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.card-conteudo p{
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-bottom: 14px;
+}
+
+.link-projeto{
+    color: var(--accent-2);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.link-projeto:hover{
+    text-decoration: underline;
+}
+
+/*Contato*/
+
+.links-contato{
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.links-contato a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--bg-alt);
+    padding: 14px 22px;
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.links-contato a:hover{
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.links-contato img{
+    width: 22px;
+    height: 22px;
+}
+
+/*Footer*/
+
+footer{
+    text-align: center;
+    padding: 30px;
+    color: var(--muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--bg-alt);
+}
+
+/*Responsivo*/
+
+@media (max-width: 720px){
+    header{
+        padding: 16px 20px;
+    }
+
+    nav{
+        gap: 18px;
+    }
+
+    .sobre{
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 60px 24px;
+    }
+
+    .sobre-texto{
+        max-width: 100%;
+    }
+
+    .sobre-foto img{
+        width: 180px;
+        height: 180px;
+    }
+
+    .projetos, .contato{
+        padding: 60px 24px;
+    }
+}
