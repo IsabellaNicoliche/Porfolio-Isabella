@@ -2,7 +2,7 @@
 
 Página de portfólio pessoal, desenvolvida em HTML e CSS puro, como parte de um trabalho acadêmico com requisitos mínimos de estrutura semântica e conteúdo.
 
-🔗 [https://github.com/IsabellaNicoliche/nome-do-repositorio.git](https://isabellanicoliche.github.io/Porfolio-Isabella/#contato](https://isabellanicoliche.github.io/Porfolio-Isabella/)
+🔗 (https://isabellanicoliche.github.io/Porfolio-Isabella/)
 
 ## 📌 Sobre o projeto
 
